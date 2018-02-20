@@ -47,33 +47,47 @@
                                 </table>
                             </td>
                             <td> <img src="./Img/dd.png"> </td>
-                            <td rowspan="3">
-                                <h1> Bienvenido a la Biblioteca Virtual de Security Hack Labs.</h1>
-                                <h3> A continuación encontrarás carpetas nombradas por categorías, allí están los archivos para su descarga. <br>
-                                        Si deseas que agreguemos archivos puedes contactarnos a través de:</h3>
-                                E-mail.
-                                <a href="https://telegram.me/SecHackLabs">Telegram.</a>
-                                <a href="https://riot.im/app/#/room/#shl:matrix.org">Matrix.</a>
-                                <a href="https://webchat.freenode.net/?channels=SecHackLabs">IRC.</a>
-                                <a href="https://www.facebook.com/groups/sechacklabs">Grupo de Facebook.</a>
-                                <a href="https://www.facebook.com/sechacklabs">Fanpage de Facebook.</a>
-                                <a href="https://twitter.com/SecHackLabs">Twitter.</a></br>
-                                <h4>Tip: Si deseas descargar todo el material que está subido en la biblioteca mediante el uso de una shell cómo Bash por ejemplo,<br>
-                                    debes instalar <a href="https://www.gnu.org/software/wget/">Wget</a> y ejecutar la siguiente orden en tu terminal:</h4>
-                                <h5><b><font color="#006400">[root@SecHackLabs:]</a>:~#</font></b><i><font color="#8B0000"> wget --reject "index.php","*.js","email-protection","robots.txt" -r --no-parent https://www.biblio.securityhacklabs.net</font></i></h5>
-                                Total de archivos y carpetas: 13<br></br>
-                                <table border=1 cellpadding=5 cellspacing=0 class=whitelinks align= "center">  
-                                    <tr><th>Nombre de Archivo</th><th>Tipo de Archivo</th><th>Tamaño</th></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Criptograf%C3%ADa/">Criptografía</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Cursos%20Hacking/">Cursos Hacking</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Cursos%20Profesionales%20de%20Linux/">Cursos Profesionales de Linux</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Hacking/">Hacking</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Privacidad%20y%20Anonimato/">Privacidad y Anonimato</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Programaci%C3%B3n/">Programación</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Seguridad%20Inform%C3%A1tica/">Seguridad Informática</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/robots.txt">robots.txt</a></td><td>file</td><td>31</td></tr>
-                                </table>
+                            <td>
+                                <h1>La verdad tras el “Zero-day” en Telegram <br>para Windows y OS X</h1>
+                                <p> Hace unos días se dió a conocer a nivel mundial una gran cantidad de noticias acerca de un fallo <br>
+                                    de tipo 0-day en la aplicación de mensajería <strong>Telegram </strong> para las plataforma <strong> Windows y OS X </strong>. <br>
+                                    La noticia decía lo siguiente:<hr/>
+                                </p>
+                                <i><font size="6" ><center>'Los cibercriminales explotaron la falla de <br>Telegram para lanzar ataques multipropósito.'</center> </font></i> <hr/>
+                                <p> En octubre de 2017, nos enteramos de una vulnerabilidad en el cliente de Windows de Telegram Messenger<br>
+                                    que estaba siendo explotada en la naturaleza. Implica el uso de un clásico ataque de anulación de derecha <br>
+                                    a izquierda cuando un usuario envía archivos a través del servicio de mensajería.
+                                </p>
+                                <hr/>
+                                <em> <strong><font size="6">Lanzando un ataque a Telegram</font></strong></em>
+                                <p>A continuación se muestra una cuenta de cómo se explotó esta vulnerabilidad en Telegram:</p>
+                                <ul><li>El cibercriminal prepara el malware para ser enviado en un mensaje. Por ejemplo,<br> un archivo JS se renombra de la siguiente manera:</li></ul>
+                            </td>
+                        </tr>
+                        <tr><td></td><td></td><td>
                                 
+                                <p><strong>evil.js -> photo_high_re * U + 202E * gnp.js</strong><br>
+                                    Donde * U + 202E * es el carácter RLO para que Telegram muestre la cadena restante <strong> gnp.js</strong> <br>
+                                    en reversa. Tenga en cuenta que esta operación no cambia el archivo real, todavía tiene la extensión * .js.
+                                </p>
+                                <ul><li>El atacante envía el mensaje, y – ¡sorpresa! – el destinatario ve un archivo de imagen PNG <br>entrante en lugar de un archivo JS:</li></ul>
+                                <center><img src="./Img/Televul.png"></center>
+                                <ul><li>Cuando el usuario hace clic en este archivo, se muestra la notificación de seguridad estándar<br> de Windows:</li></ul>
+                                <center><img src="./Img/Televul2.png" width="400" height="400"></center>
+                                <em>Es importante destacar que esta notificación solo se muestra si no se ha desactivado en la configuración<br> del sistema. Si el usuario hace clic en ‘Ejecutar’, se inicia el archivo malicioso.”</em>
+                                <p> Bien, es momento de analizar. <br><br>
+                                    Bueno, esto no es una vulnerabilidad real en Telegram Desktop, nadie puede tomar control remoto de su <br>
+                                    computadora o Telegram a menos que abra un archivo malicioso. Este tipo de vulnerabilidad se basa en la <br>
+                                    ingeniería social, de hecho, era un archivo .js oculto en un archivo .png, esto sucedió gracias a los caracteres <br>
+                                    RTL. Los usuarios de Windows al igual que los usuarios de OS X deben hacer clic en el cuadro de diálogo <br>
+                                    “Ejecutar” para instalar el malware. Así que no te preocupes, a menos que hayas abierto un archivo malicioso,<br>
+                                    siempre has estado a salvo. Lo único que debes recordar es no ejecutar archivos desconocidos de fuentes <br>inseguras. <br><br>
+
+                                    Quien se encarga de realizar la anulación de derecha a izquierda, es Windows y OS X, no Telegram. Así que <br>
+                                    eso es una carácteristica de Windows y OS X que no tiene relación con Telegram. Si usted intenta realizar <br>
+                                    lo mismo desde un equipo con el sistema GNU/Linux, sencillamente no se puede.
+
+                                </p>
                             </td>
                         </tr>
                 </table>
