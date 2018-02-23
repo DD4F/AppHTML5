@@ -47,33 +47,66 @@
                                 </table>
                             </td>
                             <td> <img src="./Img/dd.png"> </td>
-                            <td rowspan="3">
-                                <h1> Bienvenido a la Biblioteca Virtual de Security Hack Labs.</h1>
-                                <h3> A continuación encontrarás carpetas nombradas por categorías, allí están los archivos para su descarga. <br>
-                                        Si deseas que agreguemos archivos puedes contactarnos a través de:</h3>
-                                E-mail.
-                                <a href="https://telegram.me/SecHackLabs">Telegram.</a>
-                                <a href="https://riot.im/app/#/room/#shl:matrix.org">Matrix.</a>
-                                <a href="https://webchat.freenode.net/?channels=SecHackLabs">IRC.</a>
-                                <a href="https://www.facebook.com/groups/sechacklabs">Grupo de Facebook.</a>
-                                <a href="https://www.facebook.com/sechacklabs">Fanpage de Facebook.</a>
-                                <a href="https://twitter.com/SecHackLabs">Twitter.</a></br>
-                                <h4>Tip: Si deseas descargar todo el material que está subido en la biblioteca mediante el uso de una shell cómo Bash por ejemplo,<br>
-                                    debes instalar <a href="https://www.gnu.org/software/wget/">Wget</a> y ejecutar la siguiente orden en tu terminal:</h4>
-                                <h5><b><font color="#006400">[root@SecHackLabs:]</a>:~#</font></b><i><font color="#8B0000"> wget --reject "index.php","*.js","email-protection","robots.txt" -r --no-parent https://www.biblio.securityhacklabs.net</font></i></h5>
-                                Total de archivos y carpetas: 13<br></br>
-                                <table border=1 cellpadding=5 cellspacing=0 class=whitelinks align= "center">  
-                                    <tr><th>Nombre de Archivo</th><th>Tipo de Archivo</th><th>Tamaño</th></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Criptograf%C3%ADa/">Criptografía</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Cursos%20Hacking/">Cursos Hacking</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Cursos%20Profesionales%20de%20Linux/">Cursos Profesionales de Linux</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Hacking/">Hacking</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Privacidad%20y%20Anonimato/">Privacidad y Anonimato</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Programaci%C3%B3n/">Programación</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/Seguridad%20Inform%C3%A1tica/">Seguridad Informática</a></td><td>dir</td><td>4096</td></tr>
-                                    <tr><td><a href="https://www.biblio.securityhacklabs.net/robots.txt">robots.txt</a></td><td>file</td><td>31</td></tr>
+                            <td>
+                                <h1>SecHackLabs: Hacking con <br>Nmap – Técnicas basadas en el escaneo de puertos #1.</h1>
+                                <hr/><hr/>
+                                <table>
+                                    <tr>
+                                        <td><img src="./Img/Puertos.png" width="400" height="200"></td>
+                                        <td><p>
+                                            Anteriormente estudiamos cómo descubrir y ver el estado<br>
+                                            de los equipos que deseamos escanear dentro de una red <br>
+                                            usando diversas técnicas y órdenes desde la línea de <br>
+                                            comandos. Hoy veremos cómo poceder luego de tener <br>
+                                            identificada nuestra máquina o host al que deseamos <br>
+                                            realizarle un escaneo usando técnicas que se basan en <br>
+                                            el escaneo especifico de puertos.<br>
+                                        </p>
+                                        </td>
+                                    </tr>
                                 </table>
-                                
+                                <p>
+                                    <strong>TCP SYN Scan (-sS)</strong> <br>
+                                    Esta técnica también es conocida como SYN Stealth o Half-Open Scan. Es la técnica más popular y la utilizada por defecto,<br>
+                                    permitiendo el escaneo de miles de puertos por segundo en redes rápidas sin presencia de herramientas cortafuegos. Esta <br>
+                                    opción es relativamente sigilosa y rápida, ya que no finaliza las conexiones que abre, así como fiable al no depender, <br>
+                                    como otras técnicas avanzadas, de las particularidades de las diferentes implementaciones de la pila TCP/IP presentes <br>
+                                    en plataformas específicas. Permite por tanto una diferenciación clara entre el estado abierto, cerrado o filtrado de <br>
+                                    un puerto.  Este análisis es el utilizado por defecto, por lo que si lanzamos Nmap sin parámetros, y tenemos los permisos<br>
+                                    de administración necesarios para poder ejecutarlo, este será el análisis realizado.<br>
+                                    Una adición muy útil es agregar la revisión de versiones para cada puerto abierto encontrado, combinándola con la opción<br>
+                                    -sV, para tratar de identificar el tipo y la versión de los servicios descubiertos.<br>
+                                    Tras realizar un análisis con esta técnica, los puertos pueden encontrarse en tres estados: abiertos (si se ha recibido <br>
+                                    un paquete SYN/ACK como respuesta a la sonda enviada), cerrados (si se ha recibido un paquete RST como respuesta) o filtrados<br>
+                                    (si no se ha recibido nada o se recibe algún paquete de tipo ICMP Inalcanzable).<br>
+                                    En la siguiente figura se muestra cómo esta técnica no negocia una conexión de forma completa. Por ejemplo, para el puerto<br>
+                                    abierto de ftp del objetivo, no se finaliza completamente el proceso habitual tree-way handshake (sólo SYN y SYN-ACK).
+                                    </p>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr><td></td><td></td><td>
+                            <center>
+                               <img src="./Img/exp1.png" width="800" height="200" > <br>
+                               <img src="./Img/exp2.png" width="800" height="300" >
+                            </center><hr/>
+                            <p><strong>TCP CONNECT SCAN (-sT)</strong><br>
+                                Esta técnica se utiliza por defecto cuando no es posible la utilización de SYN Scan (-sS), cuando el usuario <br>
+                                no tiene suficientes privilegios. Para su funcionamiento, usa las llamadas de alto nivel del sistema operativo <br>
+                                para crear los paquetes (concretamente la llamada connect()) y para obtener la información de los intentos de <br>
+                                conexión, al igual que cualquier otra aplicación. Esta técnica es menos eficiente que SYN Scan porque Nmap no <br>
+                                toma el control de los paquetes enviados, como hace en la mayoría de las otras técnicas, y en segundo lugar <br>
+                                porque termina todas las conexiones, en lugar de hacer un half-open reset. Por este motivo, es menos sigilosa, <br>
+                                siendo probable que un IDS/IPS registre los intentos de conexión. Del mismo modo que en la técnica SYN Scan, <br>
+                                según esta técnica los puertos pueden estar en tres estados: abierto, cerrado y filtrado. Las siguientes figuras<br>
+                                muestran cómo esta técnica negocia una conexión de forma completa con aquellos puertos que han respondido. Por <br>
+                                ejemplo, para el puerto abierto de SSH del objetivo, se muestra el proceso de establecimiento de conexión <br>
+                                tree-way handshake (SYN, SYN-ACK, ACK).
+                            </p>    
+                            <center>
+                                    <img src="./Img/exp3.png" width="800" height="200" > <br>
+                                    <img src="./Img/exp4.png" width="800" height="300" >
+                                 </center>
                             </td>
                         </tr>
                 </table>
