@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+        <title>DDroid </title>
+        <link rel="icon" href="../Recursos/Img/title.jpg" />
+        <meta charset="utf-8" />
+	</head>
+    <body>
+        <table style="width:100%"> 
+            <tr><td>
+                <table>
+                    <tr><td>
+                        <img src="../Recursos/Img/Encabezado.png" width="1325" height="60" >
+                    </td></tr>
+                </table>
+                <table border="0">
+                    <tr>
+                        <td> <a href="../index.html"> <img src="../Recursos/Img/logo.png" width="400" height="100" > </a></td>
+                        <td> <a href="index.html"> <img src="../Recursos/Img/Inicio.png"> </a></td>
+                        <td> <a href="Nosotros.html"> <img src="../Recursos/Img/Nosotros.png"> </a> </td>
+                        <td> <a href="Material.html"> <img src="../Recursos/Img/Material.png"> </a> </td>
+                        <td> <a href="Servicios.html"> <img src="../Recursos/Img/Servicios.png"> </a> </td>
+                        <td> <a href="Contacto.html"> <img src="../Recursos/Img/Contacto.png"> </a> </td>
+                    </tr>
+                </table>
+                
+                <hr/>
+                <hr/>
+                <table border="0" align="center">
+                        <tr>
+                            <td> 
+                                <table border="0" align="top">
+                                    <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
+                                    <tr><th><hr/>Categorías <hr/></th></tr>
+                                    <tr> <td>
+                                        <ul class="nav navbar-nav">
+                                            <li> <a href="Android.html"> Android </a> </li> <br>
+                                            <li> <a href="Explotacion.htm"> Explotación </a> </li> <br>
+                                            <li> <a href="Linux.htm"> Linux Hardening </a> </li> <br>
+                                            <li> <a href="Hacking.htm"> Hacking </a> </li> <br>
+                                            <li> <a href="Osint.htm"> Osint</a> </li> <br>
+                                            <li> <a href="Windows.htm"> Windows </a> </li> <br>
+                                        </ul>
+                                    </td></tr>
+                                    
+                                </table>
+                            </td>
+                            <td> <img src="../Recursos/Img/dd.png"> </td>
+                            <td>
+                                <h1>SecHackLabs: Hacking con <br>Nmap – Técnicas basadas en el escaneo de puertos #1.</h1>
+                                <hr/><hr/>
+                                <table>
+                                    <tr>
+                                        <td><img src="../Recursos/Img/Puertos.png" width="400" height="200"></td>
+                                        <td><p>
+                                            Anteriormente estudiamos cómo descubrir y ver el estado<br>
+                                            de los equipos que deseamos escanear dentro de una red <br>
+                                            usando diversas técnicas y órdenes desde la línea de <br>
+                                            comandos. Hoy veremos cómo poceder luego de tener <br>
+                                            identificada nuestra máquina o host al que deseamos <br>
+                                            realizarle un escaneo usando técnicas que se basan en <br>
+                                            el escaneo especifico de puertos.<br>
+                                        </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    <strong>TCP SYN Scan (-sS)</strong> <br>
+                                    Esta técnica también es conocida como SYN Stealth o Half-Open Scan. Es la técnica más popular y la utilizada por defecto,<br>
+                                    permitiendo el escaneo de miles de puertos por segundo en redes rápidas sin presencia de herramientas cortafuegos. Esta <br>
+                                    opción es relativamente sigilosa y rápida, ya que no finaliza las conexiones que abre, así como fiable al no depender, <br>
+                                    como otras técnicas avanzadas, de las particularidades de las diferentes implementaciones de la pila TCP/IP presentes <br>
+                                    en plataformas específicas. Permite por tanto una diferenciación clara entre el estado abierto, cerrado o filtrado de <br>
+                                    un puerto.  Este análisis es el utilizado por defecto, por lo que si lanzamos Nmap sin parámetros, y tenemos los permisos<br>
+                                    de administración necesarios para poder ejecutarlo, este será el análisis realizado.<br>
+                                    Una adición muy útil es agregar la revisión de versiones para cada puerto abierto encontrado, combinándola con la opción<br>
+                                    -sV, para tratar de identificar el tipo y la versión de los servicios descubiertos.<br>
+                                    Tras realizar un análisis con esta técnica, los puertos pueden encontrarse en tres estados: abiertos (si se ha recibido <br>
+                                    un paquete SYN/ACK como respuesta a la sonda enviada), cerrados (si se ha recibido un paquete RST como respuesta) o filtrados<br>
+                                    (si no se ha recibido nada o se recibe algún paquete de tipo ICMP Inalcanzable).<br>
+                                    En la siguiente figura se muestra cómo esta técnica no negocia una conexión de forma completa. Por ejemplo, para el puerto<br>
+                                    abierto de ftp del objetivo, no se finaliza completamente el proceso habitual tree-way handshake (sólo SYN y SYN-ACK).
+                                    </p>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr><td></td><td></td><td>
+                            <center>
+                               <img src="../Recursos/Img/exp1.png" width="800" height="200" > <br>
+                               <img src="../Recursos/Img/exp2.png" width="800" height="300" >
+                            </center><hr/>
+                            <p><strong>TCP CONNECT SCAN (-sT)</strong><br>
+                                Esta técnica se utiliza por defecto cuando no es posible la utilización de SYN Scan (-sS), cuando el usuario <br>
+                                no tiene suficientes privilegios. Para su funcionamiento, usa las llamadas de alto nivel del sistema operativo <br>
+                                para crear los paquetes (concretamente la llamada connect()) y para obtener la información de los intentos de <br>
+                                conexión, al igual que cualquier otra aplicación. Esta técnica es menos eficiente que SYN Scan porque Nmap no <br>
+                                toma el control de los paquetes enviados, como hace en la mayoría de las otras técnicas, y en segundo lugar <br>
+                                porque termina todas las conexiones, en lugar de hacer un half-open reset. Por este motivo, es menos sigilosa, <br>
+                                siendo probable que un IDS/IPS registre los intentos de conexión. Del mismo modo que en la técnica SYN Scan, <br>
+                                según esta técnica los puertos pueden estar en tres estados: abierto, cerrado y filtrado. Las siguientes figuras<br>
+                                muestran cómo esta técnica negocia una conexión de forma completa con aquellos puertos que han respondido. Por <br>
+                                ejemplo, para el puerto abierto de SSH del objetivo, se muestra el proceso de establecimiento de conexión <br>
+                                tree-way handshake (SYN, SYN-ACK, ACK).
+                            </p>    
+                            <center>
+                                    <img src="../Recursos/Img/exp3.png" width="800" height="200" > <br>
+                                    <img src="../Recursos/Img/exp4.png" width="800" height="300" >
+                                 </center>
+                            </td>
+                        </tr>
+                </table>
+                <hr/>
+                <hr/>
+                <footer class="text-center well">
+                    <p> <center> ddfsociety.comeze.com </center> </p>
+                </footer>        
+            </td></tr>
+        </table> 
+    </body>
+</html>
