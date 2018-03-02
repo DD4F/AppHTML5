@@ -1,0 +1,45 @@
+html, body { 
+    height:100%; 
+    margin:0;
+    padding:0;
+    font-family: "Inconsolata";
+    font-size: 100%;
+    font-weight: 400;
+  }
+
+.Contenedor {
+    display:flex;
+    flex-direction: row;
+    min-height:100%;
+}
+
+.Contenedor > div {
+    flex:1;
+    display:flex;
+}
+
+.View {
+    background: white;
+    display: block;
+}
+
+.Opcion{
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.OpcionM{
+    flex-direction: column;
+    padding-top: 3px;
+    padding-bottom: 40px;
+    padding-left: 15%;    
+}
+
+ul {
+    list-style: none;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
