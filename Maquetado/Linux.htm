@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+        <title>DDroid </title>
+        <link rel="icon" href="../Recursos/Img/title.jpg" />
+        <meta charset="utf-8" />
+	</head>
+    <body>
+        <table style="width:100%"> 
+            <tr><td>
+                <table>
+                    <tr><td>
+                        <img src="../Recursos/Img/Encabezado.png" width="1325" height="60" >
+                    </td></tr>
+                </table>
+                <table border="0">
+                    <tr>
+                        <td> <a href="../index.html"> <img src="../Recursos/Img/logo.png" width="400" height="100" > </a></td>
+                        <td> <a href="index.html"> <img src="../Recursos/Img/Inicio.png"> </a></td>
+                        <td> <a href="Nosotros.html"> <img src="../Recursos/Img/Nosotros.png"> </a> </td>
+                        <td> <a href="Material.html"> <img src="../Recursos/Img/Material.png"> </a> </td>
+                        <td> <a href="Servicios.html"> <img src="../Recursos/Img/Servicios.png"> </a> </td>
+                        <td> <a href="Contacto.html"> <img src="../Recursos/Img/Contacto.png"> </a> </td>
+                    </tr>
+                </table>
+                
+                <hr/>
+                <hr/>
+                <table border="0" align="center">
+                        <tr>
+                            <td> 
+                                <table border="0" align="top">
+                                    <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
+                                    <tr><th><hr/>Categorías <hr/></th></tr>
+                                    <tr> <td>
+                                        <ul class="nav navbar-nav">
+                                            <li> <a href="Android.html"> Android </a> </li> <br>
+                                            <li> <a href="Explotacion.htm"> Explotación </a> </li> <br>
+                                            <li> <a href="Linux.htm"> Linux Hardening </a> </li> <br>
+                                            <li> <a href="Hacking.htm"> Hacking </a> </li> <br>
+                                            <li> <a href="Osint.htm"> Osint</a> </li> <br>
+                                            <li> <a href="Windows.htm"> Windows </a> </li> <br>
+                                        </ul>
+                                    </td></tr>
+                                    
+                                </table>
+                            </td>
+                            <td> <img src="../Recursos/Img/dd.png"> </td>
+                            <td>
+                                <h1><center>SecHackLabs – Linux Hardening: <br>El init e inicio de servicios.</center></h1>
+                                <hr/><hr/>
+                                <table>
+                                    <tr>
+                                        <td><img src="../Recursos/Img/LinuxHard.png" width="400" height="200"></td>
+                                        <td><p>
+                                            La mayoría de sistemas operativos vienen con un gran <br>
+                                            número de servicios que inician automaticamente durante <br>
+                                            el proceso de arranque. Obviamente, varios de ellos son <br>
+                                            actualmente importantes para la funcionalidad del sistema,<br>
+                                            otros son designados con la finalidad de iniciar aplicaciones<br>
+                                            automaticamente cómo SendMail y Apache. Pero, una gran<br>
+                                            cantidad de ellos son innecesarios y además en ocasiones<br>
+                                            pueden iniciar servicios que colocan en riesgo la seguridad<br>
+                                            de tu sistema. El init es el encargado de iniciar o detener<br>
+                                            los servicios que existen en el sistema.
+                                        </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br><br><br>
+                                <i> A continuación dejaré una tabla (tomada desde experiencia personal), sobre cuales servicios se pueden deshabilitar y cuales no.</i> <hr/>
+                            </td>
+                        </tr>
+                        <tr><td></td><td></td><td>
+                            <center>
+                                <table border="0" cellspacing="0">
+                                        <colgroup width="85"></colgroup>
+                                        <colgroup width="393"></colgroup>
+                                        <colgroup width="107"></colgroup>
+                                        <tbody>
+                                           <tr>
+                                              <td align="left" height="17"> <strong>Servicio</strong></span></td>
+                                              <td align="left"> <strong> Descripción </strong></span></td>
+                                              <td align="left"> </strong> ¿Lo deshabilito?</strong></span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> anacron</span></td>
+                                              <td align="left"> Una variante de la herramienta “cron”</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> apmd</span></td>
+                                              <td align="left"> Manejo Avanzado de Energía</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> atd</span></td>
+                                              <td align="left"> Servicio de la herramienta “at”</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> autofs</span></td>
+                                              <td align="left"> Automontaje de dispositivos</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> crond</span></td>
+                                              <td align="left"> The demonio cron</span></td>
+                                              <td align="left"> No</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> cups</span></td>
+                                              <td align="left"> Funciones de impresión</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> functions</span></td>
+                                              <td align="left"> Funciones de arranque para Scrips en Shell</span></td>
+                                              <td align="left"> No</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> gpm</span></td>
+                                              <td align="left"> Soporte de ratón para aplicaciones de texto</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> irda</span></td>
+                                              <td align="left"> Soporte para IrDA</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> isdn</span></td>
+                                              <td align="left"> Soporte para ISDN</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> keytable</span></td>
+                                              <td align="left"> Mapeo del teclado</span></td>
+                                              <td align="left"> No</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> kudzu</span></td>
+                                              <td align="left"> Pruebas de hardware</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> lpd</span></td>
+                                              <td align="left"> Demonio de impresión</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> netfs</span></td>
+                                              <td align="left"> Montaje de sistemas de archivos en red</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> nfs</span></td>
+                                              <td align="left"> Servicios NFS</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> nfslock</span></td>
+                                              <td align="left"> Servicios de bloqueo NFS</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> ntpd</span></td>
+                                              <td align="left"> Network Time Protocol dameon</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> pcmcia</span></td>
+                                              <td align="left"> Soporte para PCMCIA</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> portmap</span></td>
+                                              <td align="left"> Soporte para conexiones RPC</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> random</span></td>
+                                              <td align="left"> Instantáneas del estado random.</span></td>
+                                              <td align="left"> No</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> rawdevices</span></td>
+                                              <td align="left"> Asignación de dispositivos de lectura a dispositivos bloqueados</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> rhnsd</span></td>
+                                              <td align="left"> RedHat Network Daemon</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> snmpd</span></td>
+                                              <td align="left"> Soporte para SNMPD</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> snmptrap</span></td>
+                                              <td align="left"> Servicio de SNMPD trap</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> sshd</span></td>
+                                              <td align="left"> Secure Shell (SSH) daemon</span></td>
+                                              <td align="left"> Sí (Si no usas SSH)</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> winbind</span></td>
+                                              <td align="left"> Soporte para Samba</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> xfs</span></td>
+                                              <td align="left"> Servidor X Font</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                           <tr>
+                                              <td align="left" height="17"> ypbind</span></td>
+                                              <td align="left"> Soprte para cliente NIS/YP</span></td>
+                                              <td align="left"> Sí</span></td>
+                                           </tr>
+                                        </tbody>
+                                     </table>
+                            </center><hr/><hr/>
+                            <p> Un gran número de servicios listados en la tabla anterior, basta con aplicar sentido común para saber si deshabilitarlos o no. Por<br>
+                                ejemplo, el servicio windbind es solo necesario sin realmente utilizas samba. Si usted no tiene imporesoras instaladas, no necesita<br>
+                                de los servicios cups y lpd. Las recomendaciones aquí propuestas, están basadas en experiencia personal de que esos servicios no <br>
+                                son requeridos en un equipo de procucción. Por ejemplo, usted rara vez encontrará el servicio apmd activo en un servidor de<br>
+                                producción, sin embargo este es comúnmente utilizado en portatiles para proveer el adecuado manejo de la energía.<br><br> <br>
+
+                                Usted puede deshabilitar los servicios de acuerdo a las herramientas que te de tu distribución, actualmente la mayoría de sistemas <br>
+                                GNU/Linux usan SystemD. Sin embargo, antiguas distribuciones usan SysVinit y otras usan OpenRC. Si el caso tuyo es SystemD,<br>
+                                puedes deshabilitaros con la herramienta systemctl disable $service, si usas SysVinit, será update-rc.d #service remove, en caso <br>
+                                que uses     OpenRC será openrc|update-rc delete $service.
+
+                            </p>    
+                            </td>
+                        </tr>
+                </table>
+                <hr/>
+                <hr/>
+                <footer class="text-center well">
+                    <p> <center> ddfsociety.comeze.com </center> </p>
+                </footer>        
+            </td></tr>
+        </table> 
+    </body>
+</html>
