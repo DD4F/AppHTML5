@@ -1,0 +1,99 @@
+/* Estilo de elemento body */
+body {
+    margin:0;
+    padding:0;
+    border:0;           
+    width:100%;
+    min-width:600px; /* Mínimo de ancho. Si no es necesario puede ser eliminado */
+                     /* Esta propiedad no funciona en versiones viejas de Internet Explorer */
+    font-size:100%;
+    font-family: "Inconsolata";
+}
+ 
+/* Estilo para el encabezado */
+.Cabeza {
+    width:99,8%;   /* Queremos que vaya de un lado al otro de la plantilla */
+    padding: 2px;
+    text-align: center;
+}
+
+.Lo {
+    width: 35%;
+    background-color: D0FA58;
+    float: left;
+    text-align:left;
+    margin: 10px 10px 10px 10px;
+}
+
+.Opc {
+    width: auto;
+    height: auto;
+    float: left;
+    background-color: D0FA58;
+    margin: 30px;
+}
+
+.Contendor {
+    position:relative;  /* Esto arregla un bug en IE7 */
+    width:99%;         /* el ancho de toda la página */
+    overflow:hidden;
+    margin: 10px 10px 10px 10px;
+    text-align: justify;
+}
+
+.Conten {
+    float: left;
+    position: relative;
+    width: 35%;
+    padding: 5px;
+    margin: 10px 10px 10px 10px;
+}
+
+.Conten2 {
+    float: left;
+    position: relative;
+    padding: 5px;
+    width: 55%;
+    margin: 10px 10px 10px 10px;
+}
+.img {
+    width: 100%;
+    height: auto;
+}
+/* estilo del pie de la página */
+.pie {
+    clear:both;
+    float:left;
+    width:99%;
+    padding: 5px;
+    text-align: center
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+
+li a {
+    display: block;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+li a:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+/* Formulario js */
+

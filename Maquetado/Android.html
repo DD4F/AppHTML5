@@ -1,162 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
+    <head>
         <title>DDroid </title>
         <link rel="icon" href="../Recursos/Img/title.jpg" />
         <meta charset="utf-8" />
-	</head>
+        <link href="../Stylo/Stilo.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+        <link type="text/css" rel="stylesheet" href="estilos.css" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0 ">
+    </head>
     <body>
-        <table style="width:100%"> 
-            <tr><td>
-                <table>
-                    <tr><td>
-                        <img src="../Recursos/Img/Encabezado.png" width="1325" height="60" >
-                    </td></tr>
-                </table>
-                <table border="0">
-                    <tr>
-                        <td> <a href="../index.html"> <img src="../Recursos/Img/logo.png" width="400" height="100" > </a></td>
-                        <td> <a href="index.html"> <img src="../Recursos/Img/Inicio.png"> </a></td>
-                        <td> <a href="Nosotros.html"> <img src="../Recursos/Img/Nosotros.png"> </a> </td>
-                        <td> <a href="Material.html"> <img src="../Recursos/Img/Material.png"> </a> </td>
-                        <td> <a href="Servicios.html"> <img src="../Recursos/Img/Servicios.png"> </a> </td>
-                        <td> <a href="Contacto.html"> <img src="../Recursos/Img/Contacto.png"> </a> </td>
-                    </tr>
-                </table>
-                
-                <hr/>
-                <hr/>
-                <table border="0" align="center">
-                        <tr>
-                            <td> 
-                                <table border="0" align="top">
-                                    <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
-                                    <tr><th><hr/>Categorías <hr/></th></tr>
-                                    <tr> <td>
-                                        <ul class="nav navbar-nav">
-                                            <li> <a href="Android.html"> Android </a> </li> <br>
-                                            <li> <a href="Explotacion.htm"> Explotación </a> </li> <br>
-                                            <li> <a href="Linux.htm"> Linux Hardening </a> </li> <br>
-                                            <li> <a href="Hacking.htm"> Hacking </a> </li><br>
-                                            <li> <a href="Osint.htm"> Osint</a> </li> <br>
-                                            <li> <a href="Windows.htm"> Windows </a> </li> <br>
-                                        </ul>
-                                    </td></tr>
-                                    
-                                </table>
-                            </td>
-                            <td> <img src="../Recursos/Img/dd.png"> </td>
-                            <td>
-                                <h1><center>TOR en Android: Enrutando todo el tráfico de red <br>mediante TOR sin necesidad de acceso root.</center></h1>
-                                <hr/><hr/>
-                                <table>
-                                    <tr>
-                                        <td><img src="../Recursos/Img/Tor.png" width="400" height="200"></td>
-                                        <td><p>
-                                            A lo largo de este tiempo hemos dedicado tiempo a realizar <br>
-                                            tutoriales sobre cómo mantener nuestra privacidad en la red <br>
-                                            desde nuestra computadora y recibimos muchas peticiones <br>
-                                            solicitando abarcar el área de la seguridad desde dispositivos<br>
-                                            móviles. Por el momento decidimos solamente añadir soporte <br>
-                                            a móviles con el S.O Android, por lo que de eso tratará el post. <br>
-                                            Anteriormente explicamos la manera de conectarse a una <br>
-                                            VPN usando OpenVPN y el día de hoy les explicaremos cómo<br>
-                                            hacer uso de la red Tor en su totalidad desde nuestro <br>
+        <div>
+            <!-- Este div contiene el encabezado de la página -->
+            <div class='Cabeza'>
+                <img src="../Recursos/Img/Encabezado.png" width="100%" height="60" >
+            </div>
+            <div class='Cabeza'>
+                <div class="Lo">
+                    <a class="img" href="../index.html"> <img src="../Recursos/Img/logo.png" width="100%" height="100" > </a>
+                </div>
+                <div class="Opc">
+                <ul>  <br>
+                    <li> <a href="index.html"> <h3>Inicio </h3></a> </li>
+                    <li> <a href="Nosotros.html"> <h3>Nosotros </h3></a> </li>
+                    <li> <a href="Material.html"> <h3>Material Hacking </h3></a> </li>
+                    <li> <a href="Servicios.html"> <h3>Servicios </h3></a> </li>
+                    <li> <a href="Contacto.html"> <h3>Contacto</h3> </a> </li>
+                </ul> 
+                </div>
+            </div>
+            <!-- Este div contiene ambos, la barra lateral y el contenido principal de la página -->
+            <div class='Contendor'>     
+                    <hr/><hr/>
+                <div class='Col'>
+                 
+                    <!-- Este div contiene el contenido principal -->
+                    <div class='Conten'>
+                        <table border="0" align="center">
+                            <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
+                            <tr><th><hr/><center>Categorías</center> <hr/></th></tr>
+                            <tr> <td>
+                                <ul class="nav navbar-nav">
+                                    <li> <a href="Android.html" >> <font color="#006400"> Android </font> </a> </li> <br><br>
+                                    <li> <a href="Explotacion.htm">> <font color="#006400"> Explotación </font>  </a> </li> <br><br>
+                                    <li> <a href="Linux.htm">> <font color="#006400"> Linux Hardening </font> </a> </li> <br><br>
+                                    <li> <a href="Hacking.htm">> <font color="#006400"> Hacking </font> </a> </li> <br><br>
+                                    <li> <a href="Osint.htm">> <font color="#006400"> Osint </font></a> </li> <br><br>
+                                    <li> <a href="Windows.htm">> <font color="#006400"> Windows </font> </a> </li> <br><br>
+                                </ul>
+                            </td></tr>
+                        </table>
+                    </div>
+                    <!-- Este div contiene la barra lateral -->
+                    <div class='Conten2'>
+                        <h1><center>TOR en Android: Enrutando todo el tráfico de red mediante TOR sin necesidad de acceso root.</center></h1>
+                        <hr/><hr/>
+                            <table>
+                                <tr>
+                                    <td><img src="../Recursos/Img/Tor.png" width="400" height="200"></td>
+                                    <td><p>
+                                            A lo largo de este tiempo hemos dedicado tiempo a realizar 
+                                            tutoriales sobre cómo mantener nuestra privacidad en la red 
+                                            desde nuestra computadora y recibimos muchas peticiones 
+                                            solicitando abarcar el área de la seguridad desde dispositivos
+                                            móviles. Por el momento decidimos solamente añadir soporte 
+                                            a móviles con el S.O Android, por lo que de eso tratará el post. 
+                                            Anteriormente explicamos la manera de conectarse a una 
+                                            VPN usando OpenVPN y el día de hoy les explicaremos cómo
+                                            hacer uso de la red Tor en su totalidad desde nuestro 
                                             celular.
-                                        </p>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <br><br><br>
-                                <i> <center>Lo primero que vamos a hacer es buscar la aplicación Orbot en la Play Store y <br>damos en “Instalar”, Una vez instalada la aplicación la buscamos y la abrimos.</center></i> <hr/><hr/>
+                                    </p></td>
+                                </tr>
+                            </table>
+                            <br><br>                            
+                            <i> <center>Lo primero que vamos a hacer es buscar la aplicación Orbot en la Play Store y damos en “Instalar”, Una vez instalada la aplicación la buscamos y la abrimos.</center></i> <hr/><hr/>
                             </td>
-                        </tr>
-                        <tr><td></td><td></td><td>
-                            <center>
-                                <table border="0" cellspacing="0" align="center">
+                            </tr>
+                            <tr><td></td><td></td><td>
+                                <center>
+                                    <table border="0" cellspacing="0" align="center">
                                         <tbody>
-                                           <tr>
+                                            <tr>
                                                 <td><img src="../Recursos/Img/TorApp.png" width="350" height="600"></td>
                                                 <td> <img src="../Recursos/Img/dd.png"> </td>
                                                 <td><img src="../Recursos/Img/TorInstall.png" width="350" height="600"></td>  
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center><hr/><hr/>
+                                <i> <center>Vamos a “Configuración”, está en la parte izquierda superior y activamos “Aplicaciones en modo VPN”Una vez activada la opción, aparecerá un recuadro que nos dejará elegir las aplicaciones que queremos proxificar a travez de TOR.</center></i> <hr/><hr/>
+                                <center>
+                                    <table border="0" cellspacing="0" align="center">
+                                        <tbody>
+                                           <tr>
+                                                <td><img src="../Recursos/Img/Tor4.png" width="350" height="600"></td>
+                                                <td> <img src="../Recursos/Img/dd.png"> </td>
+                                                <td><img src="../Recursos/Img/Tor5.png" width="350" height="600"></td>  
                                            </tr>
                                         </tbody>
-                                     </table>
-                            </center><hr/><hr/>
-                            <i> <center>Vamos a “Configuración”, está en la parte izquierda superior y activamos “Aplicaciones en modo VPN”<br>Una vez activada la opción, aparecerá un recuadro que nos dejará elegir las aplicaciones que queremos proxificar a travez de TOR.</center></i> <hr/><hr/>
-                            <center>
-                                    <table border="0" cellspacing="0" align="center">
-                                            <tbody>
-                                               <tr>
-                                                    <td><img src="../Recursos/Img/Tor4.png" width="350" height="600"></td>
-                                                    <td> <img src="../Recursos/Img/dd.png"> </td>
-                                                    <td><img src="../Recursos/Img/Tor5.png" width="350" height="600"></td>  
-                                               </tr>
-                                            </tbody>
-                                         </table>
-                                <p><strong>Nota: Podemos seleccionarlas todas con la opción que aparece en la parte inferior izquierda.</strong></p>
-                            </center><hr/><hr/>
-                            <i> <center>Una vez seleccionadas las aplicaciones que deseemos proxificar con TOR, regresamos a la<br>
-                                        ventana principal de Orbot, nos aparecerá una ventana donde nos anuncia que esa característica <br>
-                                        es experimental y puede presentar inestabilidad, le damos en “Activar”.</center></i> <hr/><hr/>
-                            <center>
-                                    <table border="0" cellspacing="0" align="center">
-                                            <tbody>
-                                               <tr>
-                                                    <td><img src="../Recursos/Img/Tor6.png" width="350" height="600"></td>
-                                                    <td> <img src="../Recursos/Img/dd.png"> </td>
-                                                    <td><img src="../Recursos/Img/Tor7.png" width="350" height="600"></td>  
-                                               </tr>
-                                            </tbody>
                                     </table>
-                            </center><hr/><hr/>
-                            <p> Acontinuación aparecerá un mensaje del sistema Android donde nos indica que una aplicación desea crear una conexión VPN, <br>
-                                damos en “Aceptar”. Este abrira un recuadro informando que estamos conectados a la red TOR. Una vez realizado comprobamos<br>
-                                que todo haya salido bien de dos maneras:
-                            </p>
-                            <i>
-                                <ul>
+                                    <p><strong>Nota: Podemos seleccionarlas todas con la opción que aparece en la parte inferior izquierda.</strong></p>
+                                </center><hr/><hr/>
+                                <i> <center>Una vez seleccionadas las aplicaciones que deseemos proxificar con TOR, regresamos a la
+                                            ventana principal de Orbot, nos aparecerá una ventana donde nos anuncia que esa característica 
+                                            es experimental y puede presentar inestabilidad, le damos en “Activar”.</center></i> <hr/><hr/>
+                                <center>
+                                    <table border="0" cellspacing="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="../Recursos/Img/Tor6.png" width="350" height="600"></td>
+                                                <td> <img src="../Recursos/Img/dd.png"> </td>
+                                                <td><img src="../Recursos/Img/Tor7.png" width="350" height="600"></td>  
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center><hr/><hr/>
+                                <p> Acontinuación aparecerá un mensaje del sistema Android donde nos indica que una aplicación desea crear una conexión VPN, 
+                                    damos en “Aceptar”. Este abrira un recuadro informando que estamos conectados a la red TOR. Una vez realizado comprobamos
+                                    que todo haya salido bien de dos maneras:
+                                </p>
+                                <i><ul>
                                     <li> Comprobamos que la opción “Aplicaciones en modo VPN” esté activada.</li>
-                                    <li> Hacemos la prueba con nuestro navegador (o con las aplicaciones que hayamos seleccionado)<br>
+                                    <li> Hacemos la prueba con nuestro navegador (o con las aplicaciones que hayamos seleccionado)
                                         para verificar que el tráfico está siendo enrutado a travez de TOR.</li>
-                                    <li> Podemos identificar los nodos a los que estamos conectados expandiendo <br>
+                                    <li> Podemos identificar los nodos a los que estamos conectados expandiendo 
                                         la notificación de nuestro sistema Android.</li>
-                                </ul>
-                            </i>    
-                            <center>
+                                </ul></i>    
+                                <center>
                                     <table border="0" cellspacing="0" align="center">
-                                            <tbody>
-                                               <tr>
-                                                    <td><img src="../Recursos/Img/Tor8.png" width="350" height="600"></td>
-                                                    <td> <img src="../Recursos/Img/dd.png"> </td>
-                                                    <td><img src="../Recursos/Img/Tor9.png" width="350" height="600"></td>  
-                                               </tr>
-                                            </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="../Recursos/Img/Tor8.png" width="350" height="600"></td>
+                                                <td> <img src="../Recursos/Img/dd.png"> </td>
+                                                <td><img src="../Recursos/Img/Tor9.png" width="350" height="600"></td>  
+                                            </tr>
+                                        </tbody>
                                     </table>
-                            <hr/><hr/>
-                            <h2>Recomendaciones.</h2></center>
-                            <ul>
-                                <li>Si tienes acceso root a tu sistema android te recomendamos realizar la proxificación <br>
-                                    transparente con Orbot en lugar de usar el modo VPN, esa opción la puedes encontrar <br>
-                                    en las configuraciones de Orbot.</li>
-                                <li>En el momento de elegir las aplicaciones que desea proxificar, es recomendable que <br>
-                                    elijas solo aquellas que lo requieran y no todo el sistema. Proxificando todas las <br>
-                                    aplicaciones tu velocidad será bastante limitada y además puede traer problemas con <br>
-                                    las aplicaciones propias del sistema.</li>
-                                <li>Si solamente deseas tener un navegador corriendo bajo el servicio TOR, instala Orfox <br>
-                                    que trae integración directa con Orbot.</li>
-                                <li>Usa Firefox u Orfox en tu móvil para mayor privacidad y seguridad, te recomendamos <br>
-                                    que leas el post Configurando Firefox para ser indetectable.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                </table>
-                <hr/>
-                <hr/>
-                <footer class="text-center well">
-                    <p> <center> ddfsociety.comeze.com </center> </p>
-                </footer>        
-            </td></tr>
-        </table> 
+                                <hr/><hr/>
+                                <h2>Recomendaciones.</h2></center>
+                                <ul>
+                                    <li>Si tienes acceso root a tu sistema android te recomendamos realizar la proxificación 
+                                        transparente con Orbot en lugar de usar el modo VPN, esa opción la puedes encontrar 
+                                        en las configuraciones de Orbot.</li>
+                                    <li>En el momento de elegir las aplicaciones que desea proxificar, es recomendable que 
+                                        elijas solo aquellas que lo requieran y no todo el sistema. Proxificando todas las 
+                                        aplicaciones tu velocidad será bastante limitada y además puede traer problemas con 
+                                        las aplicaciones propias del sistema.</li>
+                                    <li>Si solamente deseas tener un navegador corriendo bajo el servicio TOR, instala Orfox 
+                                        que trae integración directa con Orbot.</li>
+                                    <li>Usa Firefox u Orfox en tu móvil para mayor privacidad y seguridad, te recomendamos
+                                        que leas el post Configurando Firefox para ser indetectable.</li>
+                                </ul>
+                    </div>
+                </div>
+            </div>
+             
+            <!-- Este div contiene el pie de la página -->
+            <div class='pie'>
+                <hr/><hr/>
+                <p> <center> ddfsociety.comeze.com </center> </p>
+            </div>
+        </div>
     </body>
 </html>

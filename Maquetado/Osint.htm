@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
+    <head>
         <title>DDroid </title>
         <link rel="icon" href="../Recursos/Img/title.jpg" />
         <meta charset="utf-8" />
-	</head>
+        <link href="../Stylo/Stilo.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+        <link type="text/css" rel="stylesheet" href="estilos.css" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0 ">
+    </head>
     <body>
-        <table style="width:100%"> 
-            <tr><td>
-                <table>
-                    <tr><td>
-                        <img src="../Recursos/Img/Encabezado.png" width="1325" height="60" >
-                    </td></tr>
-                </table>
-                <table border="0">
-                    <tr>
-                        <td> <a href="../index.html"> <img src="../Recursos/Img/logo.png" width="400" height="100" > </a></td>
-                        <td> <a href="index.html"> <img src="../Recursos/Img/Inicio.png"> </a></td>
-                        <td> <a href="Nosotros.html"> <img src="../Recursos/Img/Nosotros.png"> </a> </td>
-                        <td> <a href="Material.html"> <img src="../Recursos/Img/Material.png"> </a> </td>
-                        <td> <a href="Servicios.html"> <img src="../Recursos/Img/Servicios.png"> </a> </td>
-                        <td> <a href="Contacto.html"> <img src="../Recursos/Img/Contacto.png"> </a> </td>
-                    </tr>
-                </table>
-                
-                <hr/>
-                <hr/>
-                <table border="0" align="center">
-                        <tr>
-                            <td> 
-                                <table border="0" align="top">
-                                    <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
-                                    <tr><th><hr/>Categorías <hr/></th></tr>
-                                    <tr> <td>
-                                        <ul class="nav navbar-nav">
-                                            <li> <a href="Android.html"> Android </a> </li> <br>
-                                            <li> <a href="Explotacion.htm"> Explotación </a> </li> <br>
-                                            <li> <a href="Linux.htm"> Linux Hardening </a> </li> <br>
-                                            <li> <a href="Hacking.htm"> Hacking </a> </li> <br>
-                                            <li> <a href="Osint.htm"> Osint</a> </li> <br>
-                                            <li> <a href="Windows.htm"> Windows </a> </li> <br>
-                                        </ul>
-                                    </td></tr>
-                                    
-                                </table>
-                            </td>
-                            <td> <img src="../Recursos/Img/dd.png"> </td>
-                            <td>
-                                <center><h1>“OSINT”. Herramientas de código <br>abierto de inteligencia</h1><hr/><hr/>
+        <div>
+            <!-- Este div contiene el encabezado de la página -->
+            <div class='Cabeza'>
+                <img src="../Recursos/Img/Encabezado.png" width="100%" height="60" >
+            </div>
+            <div class='Cabeza'>
+                <div class="Lo">
+                    <a class="img" href="../index.html"> <img src="../Recursos/Img/logo.png" width="100%" height="100" > </a>
+                </div>
+                <div class="Opc">
+                <ul>  <br>
+                    <li> <a href="index.html"> <h3>Inicio </h3></a> </li>
+                    <li> <a href="Nosotros.html"> <h3>Nosotros </h3></a> </li>
+                    <li> <a href="Material.html"> <h3>Material Hacking </h3></a> </li>
+                    <li> <a href="Servicios.html"> <h3>Servicios </h3></a> </li>
+                    <li> <a href="Contacto.html"> <h3>Contacto</h3> </a> </li>
+                </ul> 
+                </div>
+            </div>
+            <!-- Este div contiene ambos, la barra lateral y el contenido principal de la página -->
+            <div class='Contendor'>     
+                    <hr/><hr/>
+                <div class='Col'>
+                 
+                    <!-- Este div contiene el contenido principal -->
+                    <div class='Conten'>
+                        <table border="0" align="center">
+                            <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
+                            <tr><th><hr/><center>Categorías</center> <hr/></th></tr>
+                            <tr> <td>
+                                <ul class="nav navbar-nav">
+                                    <li> <a href="Android.html" >> <font color="#006400"> Android </font> </a> </li> <br><br>
+                                    <li> <a href="Explotacion.htm">> <font color="#006400"> Explotación </font>  </a> </li> <br><br>
+                                    <li> <a href="Linux.htm">> <font color="#006400"> Linux Hardening </font> </a> </li> <br><br>
+                                    <li> <a href="Hacking.htm">> <font color="#006400"> Hacking </font> </a> </li> <br><br>
+                                    <li> <a href="Osint.htm">> <font color="#006400"> Osint </font></a> </li> <br><br>
+                                    <li> <a href="Windows.htm">> <font color="#006400"> Windows </font> </a> </li> <br><br>
+                                </ul>
+                            </td></tr>
+                        </table>
+                    </div>
+                    <!-- Este div contiene la barra lateral -->
+                    <div class='Conten2'>
+                        <center><h1>“OSINT”. Herramientas de código <br>abierto de inteligencia</h1><hr/><hr/>
                                     <img src="../Recursos/Img/Osint.png"></center>
-                                <hr/>
-                                <hr/>
-                            </td>
-                        </tr>
-                        <tr><td></td><td></td><td>
+                                <hr/><hr/>
                                 <p>
-                                    La información no tiene que ser secreta para ser valiosa. Ya sea en los blogs que navegamos, en las <br>
-                                    transmisiones que vemos o en las revistas especializadas que leemos, hay un suministro interminable <br>
-                                    de información que contribuye a nuestra comprensión del mundo. La comunidad de inteligencia generalmente<br>
-                                    se refiere a esta información como inteligencia de código abierto (OSINT). También desempeña un papel <br>
-                                    esencial al brindar a la comunidad de seguridad nacional una perspectiva y un contexto completos a un<br>
+                                    La información no tiene que ser secreta para ser valiosa. Ya sea en los blogs que navegamos, en las 
+                                    transmisiones que vemos o en las revistas especializadas que leemos, hay un suministro interminable 
+                                    de información que contribuye a nuestra comprensión del mundo. La comunidad de inteligencia generalmente
+                                    se refiere a esta información como inteligencia de código abierto (OSINT). También desempeña un papel 
+                                    esencial al brindar a la comunidad de seguridad nacional una perspectiva y un contexto completos a un
                                     costo relativamente bajo.<br><br>
-                                    Se extrae de material disponible públicamente, que incluye:<br><br>
+                                    Se extrae de material disponible públicamente, que incluye:<br>
                                 </p>
                                 <ul>
                                     <li> Internet en general.</li>
@@ -71,29 +74,29 @@
                                     <li> Redes sociales.</li>
                                     <li> Ubicación  geográfica.</li>
                                 </ul><br> <br>
-                                    En mundo del hacking se usan OSINT de diferentes formas, una de ellas es  buscando información por <br>
-                                    medio de phishing. Un ataque de phishing o suplantación de identidad podría estar dirigido, por <br>
-                                    ejemplo a un solo objetivo de negocios de alto perfil. Este grupo atacante tiene acceso a datos <br>
-                                    confidenciales de empleados, clientes, banca, cuentas de valores. Los atacantes se dirigen a este <br>
-                                    grupo con correos electrónicos y páginas web integradas con código malicioso. Cuando se abren los <br>
-                                    archivos adjuntos de correo electrónico o se hace clic en las páginas web, se activa el código. El <br>
-                                    código malicioso libera puertas traseras, acceso remoto o incorpora keyloggers; y en cuestión de <br>
-                                    horas o días, el atacante obtiene acceso.<br><br>
+                                    En mundo del hacking se usan OSINT de diferentes formas, una de ellas es  buscando información por 
+                                    medio de phishing. Un ataque de phishing o suplantación de identidad podría estar dirigido, por 
+                                    ejemplo a un solo objetivo de negocios de alto perfil. Este grupo atacante tiene acceso a datos 
+                                    confidenciales de empleados, clientes, banca, cuentas de valores. Los atacantes se dirigen a este 
+                                    grupo con correos electrónicos y páginas web integradas con código malicioso. Cuando se abren los 
+                                    archivos adjuntos de correo electrónico o se hace clic en las páginas web, se activa el código. El 
+                                    código malicioso libera puertas traseras, acceso remoto o incorpora keyloggers; y en cuestión de 
+                                    horas o días, el atacante obtiene acceso.<br>
                                 </p>
                                 <i><h3>Algunas herramientas de OSINT</h3></i>
                                 <strong>Crepy</strong><br><br>
                                 <center><img src="../Recursos/Img/Case.png"></center>
                                 <strong>Dmitry</strong><br><br>
                                 <center><img src="../Recursos/Img/Case.png"></center>
-                            </td>
-                        </tr>
-                </table>
-                <hr/>
-                <hr/>
-                <footer class="text-center well">
-                    <p> <center> ddfsociety.comeze.com </center> </p>
-                </footer>        
-            </td></tr>
-        </table> 
+                    </div>
+                </div>
+            </div>
+             
+            <!-- Este div contiene el pie de la página -->
+            <div class='pie'>
+                <hr/><hr/>
+                <p> <center> ddfsociety.comeze.com </center> </p>
+            </div>
+        </div>
     </body>
 </html>

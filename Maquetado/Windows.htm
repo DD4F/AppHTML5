@@ -1,101 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
+    <head>
         <title>DDroid </title>
         <link rel="icon" href="../Recursos/Img/title.jpg" />
         <meta charset="utf-8" />
-	</head>
+        <link href="../Stylo/Stilo.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+        <link type="text/css" rel="stylesheet" href="estilos.css" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0 ">
+    </head>
     <body>
-        <table style="width:100%"> 
-            <tr><td>
-                <table>
-                    <tr><td>
-                        <img src="../Recursos/Img/Encabezado.png" width="1325" height="60" >
-                    </td></tr>
-                </table>
-                <table border="0">
-                    <tr>
-                        <td> <a href="../index.html"> <img src="../Recursos/Img/logo.png" width="400" height="100" > </a></td>
-                        <td> <a href="index.html"> <img src="../Recursos/Img/Inicio.png"> </a></td>
-                        <td> <a href="Nosotros.html"> <img src="../Recursos/Img/Nosotros.png"> </a> </td>
-                        <td> <a href="Material.html"> <img src="../Recursos/Img/Material.png"> </a> </td>
-                        <td> <a href="Servicios.html"> <img src="../Recursos/Img/Servicios.png"> </a> </td>
-                        <td> <a href="Contacto.html"> <img src="../Recursos/Img/Contacto.png"> </a> </td>
-                    </tr>
-                </table>
-                
-                <hr/>
-                <hr/>
-                <table border="0" align="center">
-                        <tr>
-                            <td> 
-                                <table border="0" align="top">
-                                    <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
-                                    <tr><th><hr/>Categorías <hr/></th></tr>
-                                    <tr> <td>
-                                        <ul class="nav navbar-nav">
-                                            <li> <a href="Android.html"> Android </a> </li> <br>
-                                            <li> <a href="Explotacion.htm"> Explotación </a> </li> <br>
-                                            <li> <a href="Linux.htm"> Linux Hardening </a> </li> <br>
-                                            <li> <a href="Hacking.htm"> Hacking </a> </li> <br>
-                                            <li> <a href="Osint.htm"> Osint</a> </li> <br>
-                                            <li> <a href="Windows.htm"> Windows </a> </li> <br>
-                                        </ul>
-                                    </td></tr>
-                                    
-                                </table>
-                            </td>
-                            <td> <img src="../Recursos/Img/dd.png"> </td>
-                            <td>
-                                <h1>La verdad tras el “Zero-day” en Telegram <br>para Windows y OS X</h1>
-                                <p> Hace unos días se dió a conocer a nivel mundial una gran cantidad de noticias acerca de un fallo <br>
-                                    de tipo 0-day en la aplicación de mensajería <strong>Telegram </strong> para las plataforma <strong> Windows y OS X </strong>. <br>
-                                    La noticia decía lo siguiente:<hr/>
-                                </p>
-                                <i><font size="6" ><center>'Los cibercriminales explotaron la falla de <br>Telegram para lanzar ataques multipropósito.'</center> </font></i> <hr/>
-                                <p> En octubre de 2017, nos enteramos de una vulnerabilidad en el cliente de Windows de Telegram Messenger<br>
-                                    que estaba siendo explotada en la naturaleza. Implica el uso de un clásico ataque de anulación de derecha <br>
-                                    a izquierda cuando un usuario envía archivos a través del servicio de mensajería.
-                                </p>
-                                <hr/>
-                                <em> <strong><font size="6">Lanzando un ataque a Telegram</font></strong></em>
-                                <p>A continuación se muestra una cuenta de cómo se explotó esta vulnerabilidad en Telegram:</p>
-                                <ul><li>El cibercriminal prepara el malware para ser enviado en un mensaje. Por ejemplo,<br> un archivo JS se renombra de la siguiente manera:</li></ul>
-                            </td>
-                        </tr>
-                        <tr><td></td><td></td><td>
-                                
-                                <p><strong>evil.js -> photo_high_re * U + 202E * gnp.js</strong><br>
-                                    Donde * U + 202E * es el carácter RLO para que Telegram muestre la cadena restante <strong> gnp.js</strong> <br>
-                                    en reversa. Tenga en cuenta que esta operación no cambia el archivo real, todavía tiene la extensión * .js.
-                                </p>
-                                <ul><li>El atacante envía el mensaje, y – ¡sorpresa! – el destinatario ve un archivo de imagen PNG <br>entrante en lugar de un archivo JS:</li></ul>
-                                <center><img src="../Recursos/Img/Televul.png"></center>
-                                <ul><li>Cuando el usuario hace clic en este archivo, se muestra la notificación de seguridad estándar<br> de Windows:</li></ul>
-                                <center><img src="../Recursos/Img/Televul2.png" width="400" height="400"></center>
-                                <em>Es importante destacar que esta notificación solo se muestra si no se ha desactivado en la configuración<br> del sistema. Si el usuario hace clic en ‘Ejecutar’, se inicia el archivo malicioso.”</em>
-                                <p> Bien, es momento de analizar. <br><br>
-                                    Bueno, esto no es una vulnerabilidad real en Telegram Desktop, nadie puede tomar control remoto de su <br>
-                                    computadora o Telegram a menos que abra un archivo malicioso. Este tipo de vulnerabilidad se basa en la <br>
-                                    ingeniería social, de hecho, era un archivo .js oculto en un archivo .png, esto sucedió gracias a los caracteres <br>
-                                    RTL. Los usuarios de Windows al igual que los usuarios de OS X deben hacer clic en el cuadro de diálogo <br>
-                                    “Ejecutar” para instalar el malware. Así que no te preocupes, a menos que hayas abierto un archivo malicioso,<br>
-                                    siempre has estado a salvo. Lo único que debes recordar es no ejecutar archivos desconocidos de fuentes <br>inseguras. <br><br>
+        <div>
+            <!-- Este div contiene el encabezado de la página -->
+            <div class='Cabeza'>
+                <img src="../Recursos/Img/Encabezado.png" width="100%" height="60" >
+            </div>
+            <div class='Cabeza'>
+                <div class="Lo">
+                    <a class="img" href="../index.html"> <img src="../Recursos/Img/logo.png" width="100%" height="100" > </a>
+                </div>
+                <div class="Opc">
+                <ul>  <br>
+                    <li> <a href="index.html"> <h3>Inicio </h3></a> </li>
+                    <li> <a href="Nosotros.html"> <h3>Nosotros </h3></a> </li>
+                    <li> <a href="Material.html"> <h3>Material Hacking </h3></a> </li>
+                    <li> <a href="Servicios.html"> <h3>Servicios </h3></a> </li>
+                    <li> <a href="Contacto.html"> <h3>Contacto</h3> </a> </li>
+                </ul> 
+                </div>
+            </div>
+            <!-- Este div contiene ambos, la barra lateral y el contenido principal de la página -->
+            <div class='Contendor'>     
+                    <hr/><hr/>
+                <div class='Col'>
+                 
+                    <!-- Este div contiene el contenido principal -->
+                    <div class='Conten'>
+                        <table border="0" align="center">
+                            <tr><td> <img src="../Recursos/Img/system.png" width="200" height="150"> </td></tr>                                
+                            <tr><th><hr/><center>Categorías</center> <hr/></th></tr>
+                            <tr> <td>
+                                <ul class="nav navbar-nav">
+                                    <li> <a href="Android.html" >> <font color="#006400"> Android </font> </a> </li> <br><br>
+                                    <li> <a href="Explotacion.htm">> <font color="#006400"> Explotación </font>  </a> </li> <br><br>
+                                    <li> <a href="Linux.htm">> <font color="#006400"> Linux Hardening </font> </a> </li> <br><br>
+                                    <li> <a href="Hacking.htm">> <font color="#006400"> Hacking </font> </a> </li> <br><br>
+                                    <li> <a href="Osint.htm">> <font color="#006400"> Osint </font></a> </li> <br><br>
+                                    <li> <a href="Windows.htm">> <font color="#006400"> Windows </font> </a> </li> <br><br>
+                                </ul>
+                            </td></tr>
+                        </table>
+                    </div>
+                    <!-- Este div contiene la barra lateral -->
+                    <div class='Conten2'>
+                        <center><h1>La verdad tras el “Zero-day” en Telegram para Windows y OS X</h1></center>
+                            <p> Hace unos días se dió a conocer a nivel mundial una gran cantidad de noticias acerca de un fallo 
+                                de tipo 0-day en la aplicación de mensajería <strong>Telegram </strong> para las plataforma <strong> Windows y OS X </strong>. 
+                                La noticia decía lo siguiente:<hr/>
+                            </p>
+                            <i><font size="6" ><center>'Los cibercriminales explotaron la falla de Telegram para lanzar ataques multipropósito.'</center> </font></i> <hr/>
+                            <p> En octubre de 2017, nos enteramos de una vulnerabilidad en el cliente de Windows de Telegram Messenger
+                                que estaba siendo explotada en la naturaleza. Implica el uso de un clásico ataque de anulación de derecha 
+                                a izquierda cuando un usuario envía archivos a través del servicio de mensajería.
+                            </p>
+                            <hr/>
+                            <em> <strong><font size="6">Lanzando un ataque a Telegram</font></strong></em>
+                            <p>A continuación se muestra una cuenta de cómo se explotó esta vulnerabilidad en Telegram:</p>
+                            <ul><li>El cibercriminal prepara el malware para ser enviado en un mensaje. Por ejemplo, un archivo JS se renombra de la siguiente manera:</li></ul>
 
-                                    Quien se encarga de realizar la anulación de derecha a izquierda, es Windows y OS X, no Telegram. Así que <br>
-                                    eso es una carácteristica de Windows y OS X que no tiene relación con Telegram. Si usted intenta realizar <br>
-                                    lo mismo desde un equipo con el sistema GNU/Linux, sencillamente no se puede.
+                            
+                            <p><strong>evil.js -> photo_high_re * U + 202E * gnp.js</strong><br>
+                                Donde * U + 202E * es el carácter RLO para que Telegram muestre la cadena restante <strong> gnp.js</strong> 
+                                en reversa. Tenga en cuenta que esta operación no cambia el archivo real, todavía tiene la extensión * .js.
+                            </p>
+                            <ul><li>El atacante envía el mensaje, y – ¡sorpresa! – el destinatario ve un archivo de imagen PNG entrante en lugar de un archivo JS:</li></ul>
+                            <center><img src="../Recursos/Img/Televul.png"></center>
+                            <ul><li>Cuando el usuario hace clic en este archivo, se muestra la notificación de seguridad estándar de Windows:</li></ul>
+                            <center><img src="../Recursos/Img/Televul2.png" width="400" height="400"></center>
+                            <em>Es importante destacar que esta notificación solo se muestra si no se ha desactivado en la configuración del sistema. Si el usuario hace clic en ‘Ejecutar’, se inicia el archivo malicioso.”</em>
+                            <p> Bien, es momento de analizar. <br><br>
+                                Bueno, esto no es una vulnerabilidad real en Telegram Desktop, nadie puede tomar control remoto de su 
+                                computadora o Telegram a menos que abra un archivo malicioso. Este tipo de vulnerabilidad se basa en la 
+                                ingeniería social, de hecho, era un archivo .js oculto en un archivo .png, esto sucedió gracias a los caracteres 
+                                RTL. Los usuarios de Windows al igual que los usuarios de OS X deben hacer clic en el cuadro de diálogo 
+                                “Ejecutar” para instalar el malware. Así que no te preocupes, a menos que hayas abierto un archivo malicioso,
+                                siempre has estado a salvo. Lo único que debes recordar es no ejecutar archivos desconocidos de fuentes inseguras. <br><br>
 
-                                </p>
-                            </td>
-                        </tr>
-                </table>
-                <hr/>
-                <hr/>
-                <footer class="text-center well">
-                    <p> <center> ddfsociety.comeze.com </center> </p>
-                </footer>        
-            </td></tr>
-        </table> 
+                                Quien se encarga de realizar la anulación de derecha a izquierda, es Windows y OS X, no Telegram. Así que 
+                                eso es una carácteristica de Windows y OS X que no tiene relación con Telegram. Si usted intenta realizar 
+                                lo mismo desde un equipo con el sistema GNU/Linux, sencillamente no se puede.
+
+                            </p>
+                    </div>
+                </div>
+            </div>
+             
+            <!-- Este div contiene el pie de la página -->
+            <div class='pie'>
+                <hr/><hr/>
+                <p> <center> ddfsociety.comeze.com </center> </p>
+            </div>
+        </div>
     </body>
 </html>
