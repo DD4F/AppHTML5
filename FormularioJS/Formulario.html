@@ -11,7 +11,7 @@
         <script src="../JS/Script.js"></script>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0 ">
         <style>
-            input[type='submit'], button, [aria-label]{
+            input[type='submit'], button, [Inconsolata]{
                 cursor: pointer;
             }
             #spoiler{
@@ -57,7 +57,7 @@
                             <input type="hidden"/>
                             <tr><td>
                                 <br><label>NIT</label></td><td>
-                                <input  type="numbers" id="nit"  placeholder="Ingrese el NIT" data-validacion-tipo="requerido" required pattern="[0-9]{9}"/>
+                                <input  type="number" id="nit"  placeholder="Ingrese el NIT" data-validacion-tipo="requerido" required pattern="[0-9]{9}"/>
                             </td></tr>
                             <tr><td>
                                 <br><label>Nombre</label></td><td>
@@ -68,9 +68,38 @@
                                     <input type="tel" id="telefono"  placeholder="Ingrese el Telefono" data-validacion-tipo="requerido" required pattern="[0-9]{10}"/>
                             </td></tr>
                             <tr><td>
-                                    <br><label>Fecha de Creacion</label></td><td>
+                                    <br><label>Fecha de Creacion</label></td><td><br>
                                     <input type="date" id="fechaCreacion" placeholder="Fecha de creacion" requered />
                             </td></tr>
+                            <tr><td>
+                                <br><label>Dicta Cursos </label></td><td>
+                                    <br><input type="checkbox" id="curso" value="Si" > Si 
+                                    <input type="checkbox" id="curso" value="No" > No
+                            </td></tr>
+                            <tr><td>
+                                <br><label> Certificacion ? </label></td><td> <br>
+		                            <input type="radio" id="certificado" value="Gratis" > Gratis
+  	                                <input type="radio" id="certificado" value="Pago"> Pago
+                            </td></tr>
+                            <tr><td>
+                                <br><label>Elija una Categoria </label></td><td><br>
+                                <select id="categorias" required>
+                                    <optgroup label="Categorias"> 
+                                        <option value="android">Android </option>
+                                        <option value="Explotacion">Explotacion</option>
+                                        <option value="Linux">Linux</option>
+                                        <option value="Hacking">Hacking</option>
+                                        <option value="Osint">Osint</option>
+                                        <option value="Windows">Windwos</option>
+                                    </optgroup>
+                                        <option value="outro" >Otro</option>
+                                </select>
+                            </td></tr>
+                            <tr><td>
+                                <br><label>Como se califica </label></td><td><br>
+                                0<input type="range" id="calificacion" min="0" max="10" required>10
+                            </td></tr>                            
+
                             <tr><td>
                                     <br><label>E-mail</label></td><td>
                                     <input type="email" id="Email" placeholder="Ingrese el E-mail" data-validacion-tipo="requerido" required />
@@ -81,7 +110,7 @@
                             </td></tr>
                             <tr><td></td>
                             </td><td><center>
-                                <br><input type="submit" value="add"></center>
+                                <br><input type="submit" value="Guardar"></center>
                             </td></tr>
                         </table>
                       </form>
@@ -95,7 +124,7 @@
                                     <input type="hidden"/>
                                     <tr><td>
                                         <br><label>NIT</label></td><td>
-                                        <input  type="numbers" id="edit-nit"  placeholder="Ingrese el NIT" data-validacion-tipo="requerido" required pattern="[0-9]{9}"/>
+                                        <input  type="number" id="edit-nit"  placeholder="Ingrese el NIT" data-validacion-tipo="requerido" required pattern="[0-9]{9}"/>
                                     </td></tr>
                                     <tr><td>
                                         <br><label>Nombre</label></td><td>
@@ -109,6 +138,34 @@
                                             <br><label>Fecha de Creacion</label></td><td>
                                             <input type="date" id="edit-fechaCreacion" placeholder="Fecha de creacion" requered />
                                     </td></tr>
+                                    <tr><td>
+                                        <br><label>Dicta Cursos </label></td><td>
+                                            <br><input type="checkbox" id="edit-curso" value="Si" > Si 
+                                            <input type="checkbox" id="edit-curso" value="No" > No
+                                    </td></tr>
+                                    <tr><td>
+                                        <br><label> Certificacion ? </label></td><td> <br>
+                                            <input type="radio" id="edit-certificado" value="Gratis" > Gratis
+                                              <input type="radio" id="edit-certificado" value="Pago"> Pago
+                                    </td></tr>
+                                    <tr><td>
+                                        <br><label>Elija una Categoria </label></td><td><br>
+                                        <select id="edit-categorias" required>
+                                            <optgroup label="Categorias"> 
+                                                <option value="android">Android </option>
+                                                <option value="Explotacion">Explotacion</option>
+                                                <option value="Linux">Linux</option>
+                                                <option value="Hacking">Hacking</option>
+                                                <option value="Osint">Osint</option>
+                                                <option value="Windows">Windwos</option>
+                                            </optgroup>
+                                                <option value="outro" >Otro</option>
+                                        </select>
+                                    </td></tr>
+                                    <tr><td>
+                                        <br><label>Como se califica </label></td><td><br>
+                                        0<input type="range" id="edit-calificacion" min="0" max="10" required>10
+                                    </td></tr>  
                                     <tr><td>
                                             <br><label>E-mail</label></td><td>
                                             <input type="email" id="edit-Email" placeholder="Ingrese el E-mail" data-validacion-tipo="requerido" required />
@@ -136,7 +193,7 @@
                             <p id="counter"> <i>El conocimiento es libre.</i></p>
                             <hr/><hr/>
                         <table border=0 cellpadding=5 cellspacing=0 class=whitelinks align= "center">  
-                            <tr><th>NIT</th>    <th>Empresa</th>    <th>Telefono</th>   <th>F. Creacion</th>    <th>E-mail</th>   </tr>
+                            <tr><th>NIT</th>    <th>Empresa</th>    <th>Telefono</th>   <th>Creacion</th>    <th>Cursos</th>     <th>Certificado</th>   <th>Categoria</th>  <th>Calificacion</th>    <th>E-mail</th>   </tr>
                             <tbody id="empresas">
                             </tbody>
                         </table>
@@ -166,7 +223,7 @@
                             if (this.empresas.length > 0) {
                                 for (i = 0; i < this.empresas.length; i++) {
                                     data += '<tr>';
-                                    data += '<td>' + this.empresas[i][0] + '</td>'+'<td>' + this.empresas[i][1] + '</td>'+'<td>'+ this.empresas[i][2] + '</td>'+'<td>'+ this.empresas[i][3] + '</td>'+'<td>'+ this.empresas[i][4] + '</td>';
+                                    data += '<td>' + this.empresas[i][0] + '</td>'+'<td>' + this.empresas[i][1] + '</td>'+'<td>'+ this.empresas[i][2] + '</td>'+'<td>'+ this.empresas[i][3] + '</td>'+'<td>'+ this.empresas[i][4] + '</td>'+'<td>'+ this.empresas[i][5] + '</td>'+'<td>'+ this.empresas[i][6] + '</td>'+'<td>'+ this.empresas[i][7] + '</td>'+'<td>'+ this.empresas[i][8] + '</td>';
                                     data += '<td><button onclick="app.Edit(' + i + ')">Edit</button></td>';
                                     data += '<td><button onclick="app.Delete(' + i + ')">Delete</button></td>';
                                     data += '</tr>';
@@ -181,10 +238,14 @@
                             nombre = document.getElementById('nombre');
                             telefono = document.getElementById('telefono');
                             fechaCreacion = document.getElementById('fechaCreacion');
+                            curso = document.getElementById('curso');
+                            certificado = document.getElementById('certificado');
+                            categorias = document.getElementById('categorias');
+                            calificacion = document.getElementById('calificacion');
                             email = document.getElementById('Email');
                             password = document.getElementById('Password');
                             // Get the value
-                            var empresa = [nit.value, nombre.value, telefono.value, fechaCreacion.value, email.value, password.value];
+                            var empresa = [nit.value, nombre.value, telefono.value, fechaCreacion.value, curso.value, certificado.value , categorias.value, calificacion.value, email.value, password.value];
                     
                             if (empresa ) {
                                 // Add the new value
@@ -196,6 +257,10 @@
                                 fechaCreacion.value = '';
                                 email.value ='';
                                 password.value = '';
+                                calificacion.value='';
+                                curso.value='';
+                                certificado.value='';
+                                categorias.value = '';
                                 // Dislay the new list
                                 this.FetchAll();
                             }
@@ -206,6 +271,10 @@
                         var nombre = document.getElementById('edit-nombre');
                         var telefono = document.getElementById('edit-telefono');
                         var fechaCreacion = document.getElementById('edit-fechaCreacion');
+                        var curso = document.getElementById('edit-curso');
+                        var certificado = document.getElementById('edit-certificado');
+                        var categorias = document.getElementById('edit-categorias');
+                        var calificacion = document.getElementById('edit-calificacion');
                         var email = document.getElementById('edit-Email');
                         var password = document.getElementById('edit-Password');
                         // Display value in the field
@@ -213,15 +282,19 @@
                         nombre.value = this.empresas[item][1];
                         telefono.value = this.empresas[item][2];
                         fechaCreacion.value = this.empresas[item][3];
-                        email.value = this.empresas[item][4];
-                        password.value = this.empresas[item][5];
+                        curso.value = this.empresas[item][4];
+                        certificado.value = this.empresas[item][5];
+                        categorias.value = this.empresas[item][6];
+                        calificacion.value = this.empresas[item][7];
+                        email.value = this.empresas[item][8];
+                        password.value = this.empresas[item][9];
                         // Display fields
                         document.getElementById('fom').style.display = 'none';
                         document.getElementById('spoiler').style.display = 'block';
                         self = this;
                         document.getElementById('saveEdit').onsubmit = function() {
                           // Get value
-                          var empresa = [nit.value, nombre.value, telefono.value, fechaCreacion.value, email.value, password.value];
+                          var empresa = [nit.value, nombre.value, telefono.value, fechaCreacion.value, curso.value, certificado.value , categorias.value, calificacion.value, email.value, password.value];
                           if (empresa) {
                             // Edit value
                             self.empresas.splice(item, 1, empresa);
