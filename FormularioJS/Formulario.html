@@ -183,6 +183,19 @@
                         </div>
                       </center>
                       <hr /> <hr/>
+                        <form action="javascript:void(0);" method="POST" onsubmit="app.Busqueda()">
+                            <label>Elija una opcion </label>
+                                <select id="opcion" required>
+                                    <optgroup label="Opciones"> 
+                                        <option value="nit">NIT </option>
+                                        <option value="nombre">Nombre</option>
+                                </optgroup>
+                                <br><label>NIT</label>
+                            <br><br><input  type="text" id="bus-nit"  placeholder="Ingrese el NIT" data-validacion-tipo="requerido" required/>
+                            <input type="submit" value="Buscar"></center>
+                        </form>
+                        <hr /> <hr/>
+
                         <h2> Security Hack Labs </h2>
                         Seguridad informática, privacidad, anonimato, hacking ético, programación
                         y sistemas operativos en general.
@@ -311,7 +324,23 @@
                         // Display the new list
                         this.FetchAll();
                       };
-                      
+                        this.Busqueda = function () {
+                            nit = document.getElementById('bus-nit');
+                            var data = '';
+                            if (this.empresas.length > 0) {
+                                for (i = 0; i < this.empresas.length; i++) {
+                                    if(this.empresas[i][0] == nit.value ||this.empresas[i][1] == nit.value){
+                                        data += '<tr>';
+                                        data += '<td>' + this.empresas[i][0] + '</td>'+'<td>' + this.empresas[i][1] + '</td>'+'<td>'+ this.empresas[i][2] + '</td>'+'<td>'+ this.empresas[i][3] + '</td>'+'<td>'+ this.empresas[i][4] + '</td>'+'<td>'+ this.empresas[i][5] + '</td>'+'<td>'+ this.empresas[i][6] + '</td>'+'<td>'+ this.empresas[i][7] + '</td>'+'<td>'+ this.empresas[i][8] + '</td>';
+                                        data += '<td><button onclick="app.Edit(' + i + ')">Edit</button></td>';
+                                        data += '<td><button onclick="app.Delete(' + i + ')">Delete</button></td>';
+                                        data += '</tr>';
+                                    }
+                                    
+                                }
+                            }
+                            return this.el.innerHTML = data;
+                        };
                     }
                     app.FetchAll();
                     function CloseInput() {
